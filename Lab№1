@@ -1,1 +1,201 @@
 
+    1  clear
+    2  whoami
+    3  whoaim
+    4  whoami
+    5  echo "Hello World"
+    6  date
+    7  cal
+    8  man cal
+    9  cal -3
+   10  man cal
+   11  history
+   12  clear
+   13  pwd
+   14  cd /
+   15  cd ..
+   16  pwd
+   17  ls
+   18  ls /var
+   19  cd ~
+   20  pwd
+   21  cd
+   22  pwd
+   23  cd ..
+   24  pwd
+   25  ls
+   26  ls -l
+   27  man ls
+   28  nano ~/.bash_history
+   29  pwd
+   30  cd ..
+   31  pwd
+   32  mkdir fruits
+   33  cd
+   34  pwd
+   35  mkdir fruits
+   36  cd .
+   37  pwd
+   38  cd /
+   39  pwd
+   40  mkdir ~/animals
+   41  touch /tmp/temp
+   42  cd ~/fruits
+   43  pwd
+   44  touch apple banana pineaple lion
+   45  ls
+   46  nano ~/.bash_history
+   47  ls
+   48  rm cat.txt
+   49  ls
+   50  touch /home/Konstantin/animals/cat.txt dog.txt elephant.txt
+   51  ls
+   52  touch /home/Konstantin/animals/dog.txt
+   53  touch /home/Konstantin/animals/elephant.txt
+   54  cd /home/Konstantin/animals
+   55  ls
+   56  cd ..
+   57  ls
+   58  rm dog.txt elephant.txt
+   59  ls
+   60  apple
+   61  ls ~/animals
+   62  ls -l
+   63  ls ~/fruits
+   64  ls
+   65  cd ~/fruits
+   66  ls -l
+   67  ls b*
+   68  ls *a
+   69  ls [bi]*
+   70  ls b* i*
+   71  nano ~/.bash_history
+   72  cp /etc/passwd ~
+   73  cat /etc/issue
+   74  cp /etc/issue ~/fruits/apple
+   75  cat /home/Konstantin/fruits/apple
+   76  nano ~/.bash_history
+   77  mv lion ~/animals
+   78  ls ~
+   79  ls
+   80  ls ~/animals
+   81  mv lion ~/animals
+   82  mv ~/fruits/lion ~/animals
+   83  ls ~/animals
+   84  nano ~/.bash_history
+   85  mv pineaple pineapple
+   86  mv ~/fruits/pineaple pineapple
+   87  ls ~/fruits
+   88  ls
+   89  rm ~/pineapple
+   90  ls
+   91  ls fruits
+   92  touch ~/fruits/pineaple
+   93  ls fruits
+   94  mv pineaple pineapple
+   95  mv ~/fruits/pineaple pineapple
+   96  ls
+   97  ls fruits
+   98  wc --help
+   99  wc -l /etc/passwd
+  100  ls /etc/passwd
+  101  ln -s /etc/passwd passwd_link
+  102  ln .bash_history history_hard
+  103  ll ~/.bash_history
+  104  ln -l ~/.bash_history
+  105  ls -l ~/.bash_history
+  106  ln .bash_history history_hard2
+  107  ll ~/.bash_history
+  108  rm fruits/apple
+  109  ls fruits
+  110  rm ~/pineapple
+  111  touch ~/fruits pineapple
+  112  ls fruts
+  113  ls fruits
+  114  ls
+  115  rm ~/pineapple
+  116  touch ~/fruits/pineapple
+  117  ls fruits
+  118  ll fruits
+  119  mkdir rmme
+  120  ls
+  121  rmdir rmme
+  122  ls
+  123  rmdir fruits
+  124  man rmdir
+  125  rmdir --help
+  126  rm -fr fruits
+  127  ls
+  128  rm --help
+  129  cat /etc/passwd /var/log/boot/log
+  130  ls
+  131  cp /etc/init.d/ ~
+  132  ls
+  133  cp --help
+  134  cp -r /etc/init.d/ ~
+  135  ls
+  136  rm -fr init.d
+  137  ll
+  138  cut -d: /etc/passwd | sort
+  139  cut -d: -f1  /etc/passwd | sort
+  140  cat /etc/passwd
+  141  man column
+  142  man less
+  143  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  144  cat /etc/passwd
+  145  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  146  cat /etc/passwd
+  147  cut -d: -f1,3 /etc/passwd | sort
+  148  grep :/bin/bash /etc/passwd | wc -l
+  149  man grep
+  150  grep :/bin/bash /cut -d: -f1 | sort -r
+  151  grep :/bin/bash /cut -d: -f1 | sort 
+  152  grep :/bin/bash /cut -d: -f1 | sort -r
+  153  sort --help
+  154  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+  155  man du
+  156  xargs --help
+  157  rql -ql man -db | xargs -l du 2>/dev/null | sort -n
+  158  rpm -ql man -db | xargs -l du 2>/dev/null | sort -n
+  159  top
+  160  top -b -n1 | sort -nk1
+  161  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  162  cat /etc/passwd | sort -k1 |tr ":" " "
+  163  cat -d /etc/passwd | sort -k1 |tr ":" " "
+  164  cat -d: -f1,7 /etc/passwd | sort -k1 |tr ":" " "
+  165  cat -d: -f1,7 /etc/passwd |column -ts | sort -k1 |tr ":" " "
+  166  cat -d: -f1,7 /etc/passwd | sort -k1 |tr ":" " "| column -ts
+  167  cd /usr/share/doc/git-*
+  168  yum install -y git
+  169  sudo yum install -y git
+  170  cd /usr/share/doc/git-*
+  171  sudo yum install -y git
+  172  cd /usr/share/doc/git-*
+  173  cat user-manual.txt
+  174  nano ~/.bash_history
+  175  cd
+  176  cat user-manual.txt | tr -cs '[alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  177  cd /user/share/doc/git-*
+  178  cat user-manual.txt | tr -cs '[alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  179  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' |sort |uniq -c |sort -rn| head -5
+  180  tr '[:lower:]' '[:upper:]' < user-manual.txt | tr -d '[:punct:]' \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  181  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep - E ........ | sort -rn | head
+  182  cd
+  183  nano ~/.bash_history
+  184  ping ya.ru
+  185  curl wttr.in
+  186  hostname -I
+  187* 
+  188  curl inconfig.me | echo "\n"
+  189  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  190  less README-ru.md
+  191  id
+  192  whoami
+  193  usermod -aG wheel student
+  194  sudo id
+  195  id
+  196  sudo less /var/log/messages
+  197  less /var/log/messages
+  198  su
+  199  exit
+  200  history > lab1_history.txt
